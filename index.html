@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+      rel="stylesheet"
+  />
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!--CONTAINER WALA DIV-->
+  <div class="container">
+
+    <!--1. HEADING-->
+    <h1>Password Generator</h1>
+
+    <!--2. DISPLAY RESULT AND COPY ICON-BUTTON WALA DIV-->
+    <div class="display-container">
+
+      <!--2.1 DISPLAY RESULT-->
+      <input readonly placeholder="Password" class="display-result" data-passwordDisplay>     <!--data-passwordDisplay input tag ka custom attribute hai-->
+
+      <!--2.2 COPY ICON-BUTTON-->
+      <button class="copyButton" data-copy>
+        <span class="copiedText" data-copyMsg></span>   <!--copied wala msg display hota hai na button dabane k baad-->
+        <img src="./assets/copy.svg" alt="copy" width="23" height="23">
+      </button>
+
+    </div>  <!--DISPLAY RESULT AND COPY ICON-BUTTON WALA DIV KHATAM-->
+
+
+    <!--3. INPUT CONTAINER WALA DIV-->
+    <div class="input-container">
+    
+                          <!--3.1 PASSWORD LENGTH SECTION WALA DIV-->
+      <div class="length-container">
+
+        <!--3.1.1 PARAGRAPH-->
+        <p>Password Length</p>
+        <!--3.1.2 PASSWORD NUMBER-->
+        <p data-lengthNumber>0</p>
+
+      </div>   <!--PASSWORD LENGTH SECTION WALA DIV KHATAM-->
+
+                          <!--3.2 SLIDER-->
+        <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+
+                          <!--3.3 CHECKBOXES-->
+
+        <!--3.3.1 UPPERCASE WALA DIV-->
+        <div class="check">
+          <input type="checkbox" id="uppercase">
+          <label for="uppercase">Includes Uppercase letters</label>
+        </div>   <!--UPPERCASE WALA DIV KHATAM-->
+
+        <!--3.3.2 LOWERCASE WALA DIV-->
+        <div class="check">
+          <input type="checkbox" id="lowercase">
+          <label for="lowercase">Includes Lowercase letters</label>
+        </div>   <!--LOWERCASE WALA DIV KHATAM-->
+
+        <!--3.3.3 NUMBERS WALA DIV-->
+        <div class="check">
+          <input type="checkbox" id="numbers">
+          <label for="numbers">Includes Numbers</label>
+        </div>   <!--NUMBERS WALA DIV KHATAM-->
+
+        <!--3.3.4 SYMBOLS WALA DIV-->
+        <div class="check">
+          <input type="checkbox" id="symbols">
+          <label for="symbols">Includes Symbols</label>
+        </div>   <!--SYMBOLS WALA DIV KHATAM-->
+
+                        <!--3.4 PASSWORD STRENGTH SECTION WALA DIV-->
+        <div class="strength-container">
+
+          <!--3.4.1 HEADING PARAGRAPH-->
+          <p>Strength</p>
+          <!--3.4.2 PASSWORD STRENGTH INDICATOR WALA DIV-->
+          <div class="indicator" data-indicator></div>
+
+        </div>       <!--PASSWORD STRENGTH SECTION WALA DIV KHATAM-->
+        
+                          <!--3.5 GENERATE PASSWORD BUTTON WALA DIV-->
+        <button class="generateButton">Generate Password</button>                  
+
+    </div>    <!--INPUT CONTAINER WALA DIV KHATAM-->
+
+  </div>    <!--CONTAINER WALA DIV KHATAM-->
+
+  <!--adding JS-->
+  <script src="script.js"></script>
+  
+</body>
+</html>
